@@ -30,18 +30,36 @@ public class DAORanking extends AbstractTableModel{
         colunas = nomes;
     }
     
+    /**
+     *
+     * @return
+     */
+    @Override
     public int getColumnCount(){
         return colunas.length;
     }
     
+    /**
+     *
+     * @return
+     */
+    @Override
     public int getRowCount(){
         return linhas.size();
     }
     
+    @Override
     public String getColumnName(int numCol) {
         return colunas[numCol];
     }
     
+    /**
+     *
+     * @param numLin
+     * @param numCol
+     * @return
+     */
+    @Override
     public Object getValueAt(int numLin, int numCol){
         Object[] linha = (Object[])getLinhas().get(numLin);
         return linha[numCol];
