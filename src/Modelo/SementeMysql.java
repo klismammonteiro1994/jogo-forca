@@ -14,19 +14,19 @@ public class SementeMysql {
     public static java.sql.Connection getConexaoMySQL() {
         connection = null;
         try {
-            String driverName = "com.mysql.jdbc.Driver";
+            String driverName = "com.mysql.cj.jdbc.Driver";
             Class.forName(driverName);
             String servidor = "localhost";
             String bancodedados = "JogoForca";
             String url = "jdbc:mysql://" + servidor + "/" + bancodedados;
             String usuario = "root";
-            String senha = "";
+            String senha = "Ultr@2618";
 
             connection = DriverManager.getConnection(url, usuario, senha);
             if (connection != null) {
                 System.out.println("STATUS - Conectado com sucesso!");
             } else {
-                System.out.println("STATUS - NÃ£o foi possivel realizar conexÃo");
+                System.out.println("STATUS - Não foi possivel realizar conexÃo");
             }
             return connection;
         } catch (ClassNotFoundException e) {
